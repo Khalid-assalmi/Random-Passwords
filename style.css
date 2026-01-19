@@ -23,7 +23,8 @@ h3 ,p {
 .all {
     background-color: var(--all);
     color: var(--white);
-    width: 75vw;
+    min-width: 75vw;
+    max-width: 85vw;
     height: 75vh;
     margin-top: 12vh;
     border-radius: 16px;
@@ -32,9 +33,11 @@ h3 ,p {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px var(--black);
+    padding: 0 2vw;
 }
 .output {
-    width: 55vw;
+    max-width: 68vw;
+    min-width: 55vw;
     height: 6vh;
     background-color: transparent;
     border-radius: 7px;
@@ -44,6 +47,7 @@ h3 ,p {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5px;
 }
 .choices {
     display: flex;
@@ -88,7 +92,7 @@ input[type="number"]:focus {
     outline: none;
     border: 0.01rem solid #fff;
 }
-button {
+#create {
     width: 55vw;
     height: 6vh;
     border-radius: 7px;
@@ -99,7 +103,7 @@ button {
     color: var(--white);
     cursor: pointer;
 }
-button:hover {
+#create:hover {
     background-color: var(--buttonHover);
     border: 0.01rem dashed var(--borderHover);
     box-sizing: border-box;
@@ -119,9 +123,11 @@ button:hover {
     align-items: center;
     position: fixed;
     right: 4vw;
-    top: 0.5vh;
+    top: 4vh;
     transform: rotate(140deg);
     font-size: 16px;
+    border: none;
+    color: var(--white)
 }
 #btn:hover {
     border: 0.01rem dashed var(--white);
@@ -137,4 +143,24 @@ button:hover {
 .border {
     border: 0.0rem solid #f00;
     transition: 2s;
+}
+#copy {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--all);
+    border: 0.01rem solid var(--white);
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#copy:hover {
+    border: 0.01rem dashed var(--borderHover);
+    background-color: var(--bgHover);
+}
+.other {
+    display: flex;
+    direction: ltr;
 }

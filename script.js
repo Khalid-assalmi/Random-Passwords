@@ -90,11 +90,13 @@ function changeC(id) {
 }
 function random() {
     let password = "";
-    if (length.value >= 4 && length.value <= 12) {
+    let arr = new Uint32Array(length.value);
+    window.crypto.getRandomValues(arr);
+    if (length.value >= 4 && length.value <= 32) {
         if (chars != "") {
             for (let i = 0; i<length.value; ++i) {
-            let random_index = Math.floor(Math.random()*chars.length);
-            password += chars[random_index];
+                let random_index = arr[i] % chars.length;
+                password += chars[random_index];
             }
             out.textContent = password;
         } else {
@@ -122,7 +124,7 @@ function random() {
             out.classList.add("border");
             out.innerHTML = `
             <div class='Error'>
-            <p dir='rtl'>خطأ : طول كلمة المرور أكبر من 12</p>
+            <p dir='rtl'>خطأ : طول كلمة المرور أكبر من 32</p>
             </div>`;
             setTimeout(() => {
                 out.classList.remove("border");
@@ -155,4 +157,7 @@ function moon() {
 function mode() {
     if (type == false) {sun(); type = true;}
     else {moon(); type = false}
+}
+function copy() {
+    navigator.clipboard.writeText(out.textContent);
 }
