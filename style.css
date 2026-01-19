@@ -1,0 +1,140 @@
+* {
+    justify-items: center;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.5s;
+}
+:root {
+    --main: #111;
+    --all: #1d1d1d;
+    --white: #fff;
+    --black: #000;
+    --borderHover : #696969;
+    --buttonHover: #0e0e0e;
+    --bgHover: #181818;
+}
+body {
+    background-color: var(--main);
+    transition: 0.8s;
+}
+h3 ,p {
+    cursor: default;
+}
+.all {
+    background-color: var(--all);
+    color: var(--white);
+    width: 75vw;
+    height: 75vh;
+    margin-top: 12vh;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px var(--black);
+}
+.output {
+    width: 55vw;
+    height: 6vh;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 0.01rem solid var(--white);
+    margin-bottom: 4vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choices {
+    display: flex;
+    gap: 2vw;
+}
+.choice {
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+    background-color: var(--main);
+    color: var(--white);
+    width: 15vw;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.choice:hover {
+    background-color: var(--bgHover);
+    border: 0.01rem dashed var(--borderHover);
+    box-sizing: border-box;
+}
+input[type="number"] {
+    background-color: var(--main);
+    border: none;
+    border-radius: 8px;
+    width: 20vw;
+    height: 4vh;
+    box-sizing: border-box;
+    padding: 0% 45%;
+    color: var(--white);
+    justify-items: flex-start;
+    cursor: default;
+}
+input[type="number"]:hover {
+    background-color: var(--bgHover);
+    border: 0.01rem dashed var(--borderHover);
+    box-sizing: border-box;
+}
+input[type="number"]:focus {
+    outline: none;
+    border: 0.01rem solid #fff;
+}
+button {
+    width: 55vw;
+    height: 6vh;
+    border-radius: 7px;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 4vh;
+    background: var(--main);
+    color: var(--white);
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--buttonHover);
+    border: 0.01rem dashed var(--borderHover);
+    box-sizing: border-box;
+}
+.Error {
+    color: #f00;
+    font-size: 13px;
+}
+#btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: var(--all);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 4vw;
+    top: 0.5vh;
+    transform: rotate(140deg);
+    font-size: 16px;
+}
+#btn:hover {
+    border: 0.01rem dashed var(--white);
+    background-color: var(--all);
+}
+.change {
+    background-color: rgb(0, 62, 156);
+    color: #fff;
+}
+.change:hover {
+    background-color: rgb(0, 45, 128);
+}
+.border {
+    border: 0.0rem solid #f00;
+    transition: 2s;
+}

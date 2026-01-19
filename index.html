@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Passwords</title>
+</head>
+<body>
+    <div dir="rtl">
+        <button onclick="mode()" id="btn">&#9728;</button>
+        <div class="all">
+            <h3>توليد كلمات مرور عشوائية</h3>
+            <p>كلمة المرور:</p>
+            <div class="output" id="out" dir="ltr"></div>
+            <p>أود كلمة المرور الخاصة بي أن تحتوي على:</p>
+            <div class="choices">
+                <div class="choice" onclick="later()" id="laters">الحروف</div>
+                <div class="choice" onclick="number()" id="numbers">الأرقام</div>
+                <div class="choice" onclick="symbol()" id="symbols">الرموز</div>
+            </div>
+            <p>طول كلمة المرور:</p>
+            <div class="length">
+                <input type="number" max="12" min="4" value="4" id="length">
+            </div>
+            <button onclick="random()">انشاء</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
